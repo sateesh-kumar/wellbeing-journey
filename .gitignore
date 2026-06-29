@@ -1,0 +1,22 @@
+# Create a .gitignore file
+echo "# PHP
+*.log
+*.cache
+/vendor/
+.env
+.env.local
+
+# PostgreSQL
+*.sql.bak
+*.dump
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace" > .gitignore

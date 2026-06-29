@@ -1,0 +1,34 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "name": "Admin One",
+      "email": "admin1@happinessaudit.com",
+      "role": "Super Admin",
+      "status": "Active",
+      "joinedDate": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "name": "Admin Two",
+      "email": "admin2@happinessaudit.com",
+      "role": "Admin",
+      "status": "Active",
+      "joinedDate": "2024-02-20"
+    },
+    {
+      "id": 3,
+      "name": "Admin Three",
+      "email": "admin3@happinessaudit.com",
+      "role": "Moderator",
+      "status": "Inactive",
+      "joinedDate": "2024-03-10"
+    }
+  ],
+  "settings": {
+    "siteName": "Happiness Audit",
+    "maxAdmins": 10,
+    "enableNotifications": true,
+    "maintenanceMode": false
+  }
+}

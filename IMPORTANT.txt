@@ -1,0 +1,42 @@
+src/env.php — loads your .env file
+src/Database.php — clean PDO singleton
+src/Session.php — session wrapper with CSRF and flash messages
+src/Auth.php — all auth logic in one place
+bootstrap.php — the single file that boots everything
+config.php — now just one line pointing to bootstrap
+generate_summary.php — refactored, credentials from .env
+google_callback.php — refactored, credentials from .env
+.env / .env.example — your secrets file + safe template
+.gitignore — ensures .env is never accidentally committed
+MIGRATION.md — step-by-step guide for your remaining pages
+
+To finish the migration, you only need to do 2 things per remaining page:
+
+Change require_once 'config.php' → require_once __DIR__ . '/bootstrap.php'
+Add verifyCsrf() + <?= csrfField() ?> to any page with a form (auth.php, combined_assessment.php)
+
+
+
+mental-wellness/
+│
+├── .env                    ← secrets
+├── .env.example            ← template
+├── .gitignore
+│
+├── bootstrap.php           ← outside src/ ✓
+├── config.php              ← outside src/ ✓
+├── generate_summary.php    ← outside src/ ✓
+├── google_callback.php     ← outside src/ ✓
+│
+├── auth.php
+├── dashboard.php
+├── combined_assessment.php
+├── view_results.php
+├── view_recommendations.php
+│
+└── src/                    ← internal classes, not accessed directly
+    ├── env.php
+    ├── Database.php
+    ├── Session.php
+    └── Auth.php
+
